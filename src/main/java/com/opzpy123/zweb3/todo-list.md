@@ -1,0 +1,14 @@
+代办任务
+- banner
+- 基础组件配置
+  - flyway 数据库管理 
+  - mysql
+  - mybatis
+  - redis
+  - kafka
+  - mq
+  - elk es logstash数据同步
+  - antlr dsl生成
+  - minio s3协议
+  - websocket
+  - 
