@@ -2,13 +2,14 @@
 - [x] banner
 - [ ] 基础组件配置
   - [x]  flyway 数据库管理 
-  - [ ] mysql
-  - [ ] mybatis
+  - [x]  mysql
+  - [X]  mybatis
+  - [X]  springboot test
   - [ ]  redis
   - [ ]  kafka
-  - [ ] mq
-  - [ ] elk es logstash数据同步
-  - [ ] antlr dsl生成
-  - [ ] minio s3协议
-  - [ ] websocket
+  - [ ]  mq
+  - [ ]  elk es logstash数据同步
+  - [ ]  antlr dsl生成
+  - [ ]  minio s3协议
+  - [ ]  websocket
   - [ ] 

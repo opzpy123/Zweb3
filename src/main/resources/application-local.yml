@@ -4,7 +4,6 @@ spring:
     url: jdbc:mysql://localhost:3306/zweb?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai
     username: root
     password: opzpy123
-  #### flyway ####
   flyway:
     enabled: true
     encoding: UTF-8
