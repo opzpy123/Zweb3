@@ -3,9 +3,9 @@
 - [ ] 基础组件配置
   - [x]  flyway 数据库管理 
   - [x]  mysql
-  - [X]  mybatis
-  - [X]  springboot test
-  - [ ]  redis
+  - [x]  mybatis
+  - [x]  springboot test
+  - [x]  redis
   - [ ]  kafka
   - [ ]  mq
   - [ ]  elk es logstash数据同步
