@@ -73,6 +73,9 @@ public class KafkaConf {
         return new DefaultKafkaProducerFactory<>(producerConfigs());
     }
 
+    /**
+     * 消费者工厂
+     */
     @Bean
     public ConsumerFactory<String, Object> consumerFactory() {
         return new DefaultKafkaConsumerFactory<>(consumerConfigs());

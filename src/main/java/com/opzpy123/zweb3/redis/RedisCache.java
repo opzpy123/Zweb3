@@ -1,4 +1,4 @@
-package com.opzpy123.zweb3.cache;
+package com.opzpy123.zweb3.redis;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
