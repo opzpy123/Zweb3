@@ -6,7 +6,7 @@
   - [x]  mybatis
   - [x]  springboot test
   - [x]  redis
-  - [ ]  kafka
+  - [x]  kafka
   - [ ]  mq
   - [ ]  elk es logstash数据同步
   - [ ]  antlr dsl生成

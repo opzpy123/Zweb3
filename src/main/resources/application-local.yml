@@ -15,3 +15,16 @@ spring:
       port: 6379
       password: opzpy123
       database: 1
+  kafka:
+    bootstrap-servers: localhost:9092
+    concurrency: 1 #并发数 小于或等于分区数
+    consumer:
+      group-id: ZWeb3Group
+      enable-auto-commit: false
+      max-poll-records: 4000
+      auto-commit-interval: 1000
+      auto-offset-reset: earliest
+    producer:
+      retries: 3
+      batch-size: 1000
+      buffer-memory: 33554432
