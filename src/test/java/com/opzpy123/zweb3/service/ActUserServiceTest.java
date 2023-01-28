@@ -16,8 +16,8 @@ public class ActUserServiceTest {
     @Test
     public void actUserServiceTest() {
         ActUser actUser = new ActUser();
-        actUser.setUserName("aa");
-        actUser.setUserPassword("bb");
+        actUser.setUserName("admin");
+        actUser.setUserPassword("opzpy123");
         actUserService.save(actUser);
         List<ActUser> list = actUserService.list();
         System.out.println(list);

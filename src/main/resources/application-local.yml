@@ -17,7 +17,7 @@ spring:
       database: 1
   kafka:
     bootstrap-servers: localhost:9092
-    concurrency: 1 #并发数 小于或等于分区数
+    concurrency: 1
     consumer:
       group-id: ZWeb3Group
       enable-auto-commit: false
@@ -28,3 +28,14 @@ spring:
       retries: 3
       batch-size: 1000
       buffer-memory: 33554432
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 100MB
+      max-request-size: 100MB
+s3:
+  endpoint: http://127.0.0.1:19000
+  accessKey: admin
+  secretKey: opzpy123
+  bucketName: zweb3
+  region: cn-northwest-1

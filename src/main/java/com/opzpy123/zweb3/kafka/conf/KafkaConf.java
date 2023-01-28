@@ -1,11 +1,12 @@
-package com.opzpy123.zweb3.kafka;
+package com.opzpy123.zweb3.kafka.conf;
 
+import jakarta.annotation.Resource;
 import lombok.Data;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.common.serialization.StringDeserializer;
 import org.apache.kafka.common.serialization.StringSerializer;
-import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.kafka.config.ConcurrentKafkaListenerContainerFactory;
@@ -23,30 +24,12 @@ import org.springframework.kafka.support.serializer.JsonSerializer;
 import java.util.HashMap;
 import java.util.Map;
 
-@Configuration
-@ConfigurationProperties(prefix = "spring.kafka")
 @Data
+@Configuration
+@EnableConfigurationProperties(KafkaProperties.class)
 public class KafkaConf {
-    private String bootstrapServers;
-    private Integer concurrency;
-    private ProducerProperties producer = new ProducerProperties();
-    private ConsumerProperties consumer = new ConsumerProperties();
-
-    @Data
-    public class ProducerProperties {
-        private String retries;
-        private String batchSize;
-        private String bufferMemory;
-    }
-
-    @Data
-    public class ConsumerProperties {
-        private String groupId;
-        private String autoOffsetReset;
-        private String enableAutoCommit;
-        private String maxPollRecords;
-        private String autoCommitInterval;
-    }
+    @Resource
+    private KafkaProperties kafkaProperties;
 
     /**
      * 生产者配置信息
@@ -55,11 +38,11 @@ public class KafkaConf {
     public Map<String, Object> producerConfigs() {
         Map<String, Object> props = new HashMap<>();
         props.put(ProducerConfig.ACKS_CONFIG, "0");
-        props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, bootstrapServers);
-        props.put(ProducerConfig.RETRIES_CONFIG, producer.retries);
-        props.put(ProducerConfig.BATCH_SIZE_CONFIG, producer.batchSize);
+        props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, kafkaProperties.getBootstrapServers());
+        props.put(ProducerConfig.RETRIES_CONFIG, kafkaProperties.getProducer().getRetries());
+        props.put(ProducerConfig.BATCH_SIZE_CONFIG, kafkaProperties.getProducer().getBatchSize());
         props.put(ProducerConfig.LINGER_MS_CONFIG, 1);
-        props.put(ProducerConfig.BUFFER_MEMORY_CONFIG, producer.bufferMemory);
+        props.put(ProducerConfig.BUFFER_MEMORY_CONFIG, kafkaProperties.getProducer().getBufferMemory());
         props.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class);
         props.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, JsonSerializer.class);
         return props;
@@ -95,11 +78,11 @@ public class KafkaConf {
     @Bean
     public Map<String, Object> consumerConfigs() {
         Map<String, Object> props = new HashMap<>();
-        props.put(ConsumerConfig.GROUP_ID_CONFIG, consumer.groupId);
-        props.put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, consumer.autoOffsetReset);
-        props.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, bootstrapServers);
-        props.put(ConsumerConfig.MAX_POLL_RECORDS_CONFIG, consumer.maxPollRecords);
-        props.put(ConsumerConfig.ENABLE_AUTO_COMMIT_CONFIG, consumer.enableAutoCommit);
+        props.put(ConsumerConfig.GROUP_ID_CONFIG, kafkaProperties.getConsumer().getGroupId());
+        props.put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, kafkaProperties.getConsumer().getAutoOffsetReset());
+        props.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, kafkaProperties.getBootstrapServers());
+        props.put(ConsumerConfig.MAX_POLL_RECORDS_CONFIG, kafkaProperties.getConsumer().getMaxPollRecords());
+        props.put(ConsumerConfig.ENABLE_AUTO_COMMIT_CONFIG, kafkaProperties.getConsumer().getEnableAutoCommit());
         props.put(ConsumerConfig.SESSION_TIMEOUT_MS_CONFIG, 30000);
         props.put(ConsumerConfig.REQUEST_TIMEOUT_MS_CONFIG, 30000);
         props.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class);
@@ -116,7 +99,7 @@ public class KafkaConf {
         ConcurrentKafkaListenerContainerFactory<String, Object> factory = new ConcurrentKafkaListenerContainerFactory<>();
         factory.setConsumerFactory(consumerFactory());
         //设置并发量，小于或等于Topic的分区数
-        factory.setConcurrency(concurrency);
+        factory.setConcurrency(kafkaProperties.getConcurrency());
         factory.getContainerProperties().setPollTimeout(1500);
         factory.getContainerProperties().setAckMode(ContainerProperties.AckMode.MANUAL_IMMEDIATE);
         //设置为批量消费，每个批次数量在Kafka配置参数中设置ConsumerConfig.MAX_POLL_RECORDS_CONFIG

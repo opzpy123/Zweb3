@@ -1,4 +1,4 @@
-package com.opzpy123.zweb3.redis;
+package com.opzpy123.zweb3.redis.conf;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
