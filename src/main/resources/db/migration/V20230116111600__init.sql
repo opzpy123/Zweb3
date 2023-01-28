@@ -7,7 +7,7 @@ create table ACT_USER
     CREATED_BY    varchar(32),
     UPDATE_DATE   DATETIME,
     UPDATED_BY    varchar(32),
-    IS_DELETED    TINYINT(1),
+    IS_DELETED    TINYINT(1) default 0,
     primary key (ID)
 );
 
@@ -21,6 +21,6 @@ create table FILE_INFO
     CREATED_BY       varchar(32),
     UPDATE_DATE      DATETIME,
     UPDATED_BY       varchar(32),
-    IS_DELETED       TINYINT(1),
+    IS_DELETED       TINYINT(1) default 0,
     primary key (ID)
 );
