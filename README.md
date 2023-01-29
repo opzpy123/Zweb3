@@ -14,7 +14,7 @@
     - [x]  redis实现分布式锁
     - [ ]  mq消息队列
     - [ ]  websocket双工通信
-    - [ ]  线程池实现
+    - [x]  线程池实现
     - [ ]  xxl-job
 - [] 业务
     - [ ]  elk es logstash数据同步
