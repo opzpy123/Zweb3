@@ -102,8 +102,8 @@ public class SpringContextUtil {
     /**
      * 在Spring AOP情况下，可能获取到的是Dynamic Proxy类对象，需要转换成实际的类对象
      *
-     * @param proxy
-     * @return
+     * @param proxy proxy
+     * @return obj
      */
     public static Object getRealInstance(Object proxy) throws RuntimeException {
         if (AopUtils.isJdkDynamicProxy(proxy) || AopUtils.isCglibProxy(proxy)) {
@@ -113,7 +113,6 @@ public class SpringContextUtil {
                 throw new RuntimeException(e);
             }
         }
-
         return proxy;
     }
 
