@@ -1,4 +1,4 @@
-package com.opzpy123.zweb3.conf;
+package com.opzpy123.zweb3.component.mybatisplus;
 
 import com.baomidou.mybatisplus.core.handlers.MetaObjectHandler;
 import com.opzpy123.zweb3.dto.ContextUserInfo;
