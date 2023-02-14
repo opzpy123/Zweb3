@@ -28,6 +28,11 @@ spring:
       retries: 3
       batch-size: 1000
       buffer-memory: 33554432
+  rabbitmq:
+    host: localhost
+    port: 5672
+    password: guest
+    username: guest
   servlet:
     multipart:
       enabled: true
