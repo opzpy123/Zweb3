@@ -12,6 +12,6 @@ public class ChatTest {
 
     @Test
     public void test() {
-        openAIService.test();
+        openAIService.chat("hello");
     }
 }
