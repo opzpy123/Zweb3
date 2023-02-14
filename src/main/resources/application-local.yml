@@ -38,6 +38,12 @@ spring:
       enabled: true
       max-file-size: 100MB
       max-request-size: 100MB
+
+openAI:
+  chatGPT:
+    api-key: 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
+    model: text-davinci-003
+
 s3:
   endpoint: http://127.0.0.1:19000
   accessKey: admin

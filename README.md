@@ -13,7 +13,7 @@
     - [x]  文件存储/对象存储 minio s3协议
     - [x]  redis实现分布式锁
     - [x]  mq消息队列
-    - [ ]  chatGPT3
+    - [x]  chatGPT
     - [ ]  websocket双工通信
     - [x]  线程池实现
     - [ ]  xxl-job
