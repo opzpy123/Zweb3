@@ -3,7 +3,7 @@ package com.opzpy123.zweb3.service.impl;
 import cn.hutool.core.util.ObjectUtil;
 import cn.hutool.core.util.StrUtil;
 import com.opzpy123.zweb3.model.FileInfo;
-import com.opzpy123.zweb3.s3.service.S3Service;
+import com.opzpy123.zweb3.component.s3.service.S3Service;
 import com.opzpy123.zweb3.service.FileInfoService;
 import com.opzpy123.zweb3.service.StoreService;
 import lombok.extern.slf4j.Slf4j;

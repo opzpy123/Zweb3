@@ -1,7 +1,7 @@
 package com.opzpy123.zweb3.service.impl;
 
-import com.opzpy123.zweb3.openai.OpenAIClient;
-import com.opzpy123.zweb3.openai.dto.OpenAIResp;
+import com.opzpy123.zweb3.component.openai.OpenAIClient;
+import com.opzpy123.zweb3.component.openai.dto.OpenAIResp;
 import com.opzpy123.zweb3.service.OpenAIService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

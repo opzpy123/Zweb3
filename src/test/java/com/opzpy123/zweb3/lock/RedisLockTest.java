@@ -2,8 +2,8 @@ package com.opzpy123.zweb3.lock;
 
 import cn.hutool.core.util.ObjectUtil;
 import com.opzpy123.zweb3.model.ActUser;
-import com.opzpy123.zweb3.redis.lock.support.ResourceLock;
-import com.opzpy123.zweb3.redis.lock.service.ResourceLockService;
+import com.opzpy123.zweb3.component.redis.lock.support.ResourceLock;
+import com.opzpy123.zweb3.component.redis.lock.service.ResourceLockService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;

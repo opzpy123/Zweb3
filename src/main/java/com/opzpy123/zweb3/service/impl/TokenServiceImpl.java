@@ -3,7 +3,7 @@ package com.opzpy123.zweb3.service.impl;
 import cn.hutool.core.util.IdUtil;
 import com.opzpy123.zweb3.dto.TokenInfoDto;
 import com.opzpy123.zweb3.model.ActUser;
-import com.opzpy123.zweb3.redis.cache.RedisCache;
+import com.opzpy123.zweb3.component.redis.cache.RedisCache;
 import com.opzpy123.zweb3.service.ActUserService;
 import com.opzpy123.zweb3.service.TokenService;
 import lombok.extern.slf4j.Slf4j;
