@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
 @Service("actUserService")
 public class ActUserServiceImpl extends ServiceImpl<ActUserMapper, ActUser> implements ActUserService {
     @Override
-    public ActUser getByUsername(String username) {
+    public ActUser findByUsername(String username) {
         LambdaQueryWrapper<ActUser> wrapper = new LambdaQueryWrapper<>();
         wrapper.eq(ActUser::getUserName, username);
         ActUser actUser = getOne(wrapper);

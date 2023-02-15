@@ -40,7 +40,7 @@ public class TokenServiceImpl implements TokenService {
 
     public String generateToken(String userName, long expired) {
         //允许多用户登录同一个号
-        ActUser actUser = actUserService.getByUsername(userName);
+        ActUser actUser = actUserService.findByUsername(userName);
         String token = IdUtil.randomUUID();
 
         TokenInfoDto tokenInfoDto = new TokenInfoDto();

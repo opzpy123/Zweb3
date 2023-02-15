@@ -40,7 +40,7 @@ public class TokenInterceptor implements HandlerInterceptor {
         if (StrUtil.isNotBlank(userName) && StrUtil.isNotBlank(userToken)) {
             Boolean isValid = tokenService.validateToken(userName, userToken);
             if (isValid) {
-                ActUser actUser = actUserService.getByUsername(userName);
+                ActUser actUser = actUserService.findByUsername(userName);
                 if (actUser != null) {
                     ContextUserInfo contextUserInfo = new ContextUserInfo();
                     AppContext.setUserInfo(contextUserInfo);

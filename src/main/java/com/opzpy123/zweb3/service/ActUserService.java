@@ -11,5 +11,5 @@ public interface ActUserService extends IService<ActUser> {
      * @param username 用户名
      * @return 用户信息
      */
-    ActUser getByUsername(String username);
+    ActUser findByUsername(String username);
 }
