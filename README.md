@@ -14,7 +14,7 @@
     - [x]  redis实现分布式锁
     - [x]  mq消息队列
     - [x]  chatGPT
-    - [ ]  websocket双工通信
+    - [x]  websocket双工通信
     - [x]  线程池实现
     - [ ]  xxl-job
 - [] 业务
