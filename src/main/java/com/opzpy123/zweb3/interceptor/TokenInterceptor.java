@@ -1,6 +1,7 @@
 package com.opzpy123.zweb3.interceptor;
 
 import cn.hutool.core.util.StrUtil;
+import com.opzpy123.zweb3.component.WebException;
 import com.opzpy123.zweb3.dto.ContextUserInfo;
 import com.opzpy123.zweb3.model.ActUser;
 import com.opzpy123.zweb3.service.ActUserService;
@@ -30,12 +31,10 @@ public class TokenInterceptor implements HandlerInterceptor {
         String userName = request.getHeader(HTTP_HEADER_USERNAME);
         String userToken = request.getHeader(HTTP_HEADER_USERTOKEN);
         if (StrUtil.isBlank(userName)) {
-            log.error("用户名不能为空");
-            return false;
+            throw new WebException("身份验证失败：用户名不能为空");
         }
         if (StrUtil.isBlank(userToken)) {
-            log.error("用户token不能为空");
-            return false;
+            throw new WebException("身份验证失败：用户token不能为空");
         }
         if (StrUtil.isNotBlank(userName) && StrUtil.isNotBlank(userToken)) {
             Boolean isValid = tokenService.validateToken(userName, userToken);
@@ -47,11 +46,10 @@ public class TokenInterceptor implements HandlerInterceptor {
                     BeanUtils.copyProperties(actUser, contextUserInfo);
                     return true;
                 } else {
-                    log.error("用户不存在");
-                    return false;
+                    throw new WebException("身份验证失败：用户不存在");
                 }
             }
         }
-        return false;
+        throw new WebException("身份验证失败：系统错误");
     }
 }

@@ -16,11 +16,13 @@
     - [x]  chatGPT
     - [x]  websocket双工通信
     - [x]  线程池实现
+    - [ ]  webservice 应用间通讯
+    - [ ]  ssl通信
     - [ ]  xxl-job
 - [] 业务
     - [ ]  elk es logstash数据同步
     - [ ]  antlr dsl生成
-    - [ ]  统一异常处理 统一接口返回值
+    - [x]  统一异常处理 统一接口返回值
     - [ ]  oauth身份认证/spring security
     - [ ]  基于s3文件管理
     - [ ]  服务监控

@@ -1,5 +1,6 @@
 package com.opzpy123.zweb3.component.redis.lock.support.impl;
 
+import com.opzpy123.zweb3.component.WebException;
 import com.opzpy123.zweb3.component.redis.lock.support.ResourceLock;
 import org.springframework.data.redis.core.RedisTemplate;
 
@@ -29,7 +30,7 @@ public class DistributedResourceLock implements ResourceLock {
                 return;
             }
             if (System.currentTimeMillis() - currentTimeMillis > timeout) {
-                throw new RuntimeException("获取锁超时");
+                throw new WebException("获取锁超时");
             }
         }
     }
