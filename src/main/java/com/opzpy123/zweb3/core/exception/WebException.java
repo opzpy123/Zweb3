@@ -1,4 +1,4 @@
-package com.opzpy123.zweb3.component;
+package com.opzpy123.zweb3.core.exception;
 
 public class WebException extends RuntimeException{
     public WebException(String message) {

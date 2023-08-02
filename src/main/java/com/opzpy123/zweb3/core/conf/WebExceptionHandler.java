@@ -1,6 +1,6 @@
 package com.opzpy123.zweb3.core.conf;
 
-import com.opzpy123.zweb3.component.WebException;
+import com.opzpy123.zweb3.core.exception.WebException;
 import com.opzpy123.zweb3.core.vo.resp.R;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;

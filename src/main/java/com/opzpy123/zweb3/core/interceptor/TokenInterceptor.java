@@ -1,7 +1,7 @@
 package com.opzpy123.zweb3.core.interceptor;
 
 import cn.hutool.core.util.StrUtil;
-import com.opzpy123.zweb3.component.WebException;
+import com.opzpy123.zweb3.core.exception.WebException;
 import com.opzpy123.zweb3.web.dto.ContextUserInfo;
 import com.opzpy123.zweb3.web.model.ActUser;
 import com.opzpy123.zweb3.web.service.ActUserService;

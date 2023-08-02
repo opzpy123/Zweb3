@@ -1,6 +1,6 @@
 package com.opzpy123.zweb3.component.redis.lock.support.impl;
 
-import com.opzpy123.zweb3.component.WebException;
+import com.opzpy123.zweb3.core.exception.WebException;
 import com.opzpy123.zweb3.component.redis.lock.support.ResourceLock;
 import org.springframework.data.redis.core.RedisTemplate;
 
