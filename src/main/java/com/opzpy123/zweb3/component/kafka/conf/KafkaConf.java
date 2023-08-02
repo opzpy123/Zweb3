@@ -34,6 +34,11 @@ public class KafkaConf {
 
     public static final String topic = "web3Topic1";
 
+    @Bean
+    public NewTopic web3Topic() {
+        return new NewTopic(topic, 1, (short) 1);
+    }
+
     /**
      * 生产者配置信息
      */
