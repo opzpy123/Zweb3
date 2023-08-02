@@ -1,8 +1,8 @@
 package com.opzpy123.zweb3.component.mybatisplus;
 
 import com.baomidou.mybatisplus.core.handlers.MetaObjectHandler;
-import com.opzpy123.zweb3.dto.ContextUserInfo;
-import com.opzpy123.zweb3.utils.AppContext;
+import com.opzpy123.zweb3.web.dto.ContextUserInfo;
+import com.opzpy123.zweb3.core.utils.AppContext;
 import org.apache.ibatis.reflection.MetaObject;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.context.annotation.Configuration;

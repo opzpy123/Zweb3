@@ -1,9 +1,9 @@
 package com.opzpy123.zweb3.fileStore;
 
-import com.opzpy123.zweb3.model.ActUser;
-import com.opzpy123.zweb3.model.FileInfo;
-import com.opzpy123.zweb3.service.ActUserService;
-import com.opzpy123.zweb3.service.StoreService;
+import com.opzpy123.zweb3.web.model.ActUser;
+import com.opzpy123.zweb3.web.model.FileInfo;
+import com.opzpy123.zweb3.web.service.ActUserService;
+import com.opzpy123.zweb3.core.service.StoreService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;

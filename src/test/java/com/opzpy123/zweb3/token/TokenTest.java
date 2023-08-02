@@ -1,6 +1,6 @@
 package com.opzpy123.zweb3.token;
 
-import com.opzpy123.zweb3.service.TokenService;
+import com.opzpy123.zweb3.core.service.TokenService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;

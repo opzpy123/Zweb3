@@ -1,6 +1,5 @@
 package com.opzpy123.zweb3.threadPool;
 
-import com.opzpy123.zweb3.utils.SpringContextUtil;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;

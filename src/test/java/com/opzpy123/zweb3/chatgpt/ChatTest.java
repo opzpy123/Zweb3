@@ -1,6 +1,6 @@
 package com.opzpy123.zweb3.chatgpt;
 
-import com.opzpy123.zweb3.service.OpenAIService;
+import com.opzpy123.zweb3.web.service.OpenAIService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;

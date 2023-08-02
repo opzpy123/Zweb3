@@ -1,9 +1,9 @@
 package com.opzpy123.zweb3.controller;
 
-import com.opzpy123.zweb3.vo.resp.R;
-import com.opzpy123.zweb3.vo.req.StringReq;
-import com.opzpy123.zweb3.model.ActUser;
-import com.opzpy123.zweb3.service.ActUserService;
+import com.opzpy123.zweb3.core.vo.resp.R;
+import com.opzpy123.zweb3.core.vo.req.StringReq;
+import com.opzpy123.zweb3.web.model.ActUser;
+import com.opzpy123.zweb3.web.service.ActUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

@@ -1,7 +1,7 @@
 package com.opzpy123.zweb3.rabbitmq;
 
 import cn.hutool.core.util.IdUtil;
-import com.opzpy123.zweb3.model.ActUser;
+import com.opzpy123.zweb3.web.model.ActUser;
 import org.junit.jupiter.api.Test;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;

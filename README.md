@@ -8,7 +8,7 @@
     - [x]  mybatis mybatis-plus
     - [x]  springboot test
     - [x]  redis 配置缓存
-    - [x]  kafka集成消息发送消费
+    - [x]  kafka集成消息发送消费(kraft)
     - [x]  token简单认证
     - [x]  文件存储/对象存储 minio s3协议
     - [x]  redis实现分布式锁
