@@ -1,4 +1,4 @@
-package com.opzpy123.zweb3.controller;
+package com.opzpy123.zweb3.web.controller;
 
 import com.opzpy123.zweb3.core.vo.resp.R;
 import com.opzpy123.zweb3.core.vo.req.StringReq;

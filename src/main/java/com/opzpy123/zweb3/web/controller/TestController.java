@@ -1,4 +1,4 @@
-package com.opzpy123.zweb3.controller;
+package com.opzpy123.zweb3.web.controller;
 
 import com.opzpy123.zweb3.component.kafka.conf.KafkaConf;
 import com.opzpy123.zweb3.core.vo.req.StringReq;
