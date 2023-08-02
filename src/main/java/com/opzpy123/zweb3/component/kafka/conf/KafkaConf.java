@@ -2,6 +2,7 @@ package com.opzpy123.zweb3.component.kafka.conf;
 
 import jakarta.annotation.Resource;
 import lombok.Data;
+import org.apache.kafka.clients.admin.NewTopic;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.common.serialization.StringDeserializer;
@@ -30,6 +31,8 @@ import java.util.Map;
 public class KafkaConf {
     @Resource
     private KafkaProperties kafkaProperties;
+
+    public static final String topic = "web3Topic1";
 
     /**
      * 生产者配置信息

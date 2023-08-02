@@ -1,5 +1,6 @@
 package com.opzpy123.zweb3.component.kafka.listener;
 
+import com.opzpy123.zweb3.component.kafka.conf.KafkaConf;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.springframework.kafka.annotation.KafkaListener;
@@ -11,9 +12,8 @@ import java.util.List;
 @Slf4j
 @Component
 public class KafkaTopicListener {
-    private static final String topic = "web3Topic";
 
-    @KafkaListener(topics = {topic}, containerFactory = "batchFactory")
+    @KafkaListener(topics = {KafkaConf.topic}, containerFactory = "batchFactory")
     public void onMessage(List<ConsumerRecord<?, ?>> records, Acknowledgment ack) {
         long start = System.currentTimeMillis();
         for (ConsumerRecord<?, ?> record : records) {

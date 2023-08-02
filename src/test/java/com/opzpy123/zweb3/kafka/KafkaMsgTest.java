@@ -1,7 +1,6 @@
 package com.opzpy123.zweb3.kafka;
 
-import cn.hutool.core.util.IdUtil;
-import com.opzpy123.zweb3.model.ActUser;
+import com.opzpy123.zweb3.component.kafka.conf.KafkaConf;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -14,9 +13,6 @@ public class KafkaMsgTest {
 
     @Test
     public void sendMsg() {
-        ActUser actUser = new ActUser();
-        actUser.setId(IdUtil.fastSimpleUUID());
-        actUser.setUserName("hhhh");
-        kafkaTemplate.send("web3Topic", actUser);
+        kafkaTemplate.send(KafkaConf.topic, "hello");
     }
 }
