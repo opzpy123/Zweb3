@@ -13,8 +13,8 @@ import java.util.Date;
 
 @Configuration
 @EnableTransactionManagement
-@MapperScan("com.csx.demo.spring.boot.dao")
-public class MyBatisPlusConfig {
+@MapperScan("com.opzpy123.zweb3.web.mapper")
+public class MyBatisPlusConf {
 
     @Component
     public class MyFillHandler implements MetaObjectHandler {

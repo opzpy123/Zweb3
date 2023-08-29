@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.HashMap;
+
 /**
  * <b>注意：该路由下没有校验</b>
  */
@@ -21,6 +23,8 @@ public class TestController {
 
     @PostMapping("test")
     public R<String> test(@RequestBody StringReq req) {
+        HashMap<String, String> map = new HashMap<>();
+        map.put("","");
         kafkaTemplate.send(KafkaConf.topic,"hhhhe");
         return R.success("success");
     }
