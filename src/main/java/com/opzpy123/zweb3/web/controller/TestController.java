@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.HashMap;
 
 /**
- * <b>注意：该路由下没有校验</b>
+ * <b>注意：该路由下没有权限校验</b>
  */
 @RestController
 @RequestMapping("test")
